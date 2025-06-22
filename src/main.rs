@@ -1,6 +1,8 @@
 use std::io;
 fn main() {
     
+    println!("Program for solving quadratic equation");
+    
     let mut input_a: String = String::new();
     let mut input_b: String = String::new();
     
@@ -28,6 +30,13 @@ fn main() {
         Error code: {}", e)
     }
     
-
+    //Convert String to float
+    let a: f64 = input_a.trim().parse().unwrap();
+    let b: f64 = input_b.trim().parse().unwrap();
+    let c: f64 = input_c.trim().parse().unwrap();
+    
+    //D-formula
+    let d = b * b - 4.0 * a * c;
+    println!("D = {}", d);
 
 }
