@@ -15,6 +15,9 @@ fn main() {
         
         println!("Type exit for exit!");
         println!("Enter a:");
+        if input_a == "exit" || input_b == "exit" || input_c == "exit" {
+            break;
+        }
         
         match io::stdin().read_line(&mut input_a) {
             Ok(_) => {},
@@ -37,9 +40,7 @@ fn main() {
             Err(e) => println!("Failed to gather information. 
             Error code: {}", e)
         }
-        if input_a == "exit" || input_b == "exit" || input_c == "exit" {
-            break;
-        }
+
         //Convert String to float
         let a: f64 = input_a.trim().parse().unwrap();
         let b: f64 = input_b.trim().parse().unwrap();
