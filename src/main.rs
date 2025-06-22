@@ -36,7 +36,26 @@ fn main() {
     let c: f64 = input_c.trim().parse().unwrap();
     
     //D-formula
-    let d = b * b - 4.0 * a * c;
+    let d:f64 = (b * b) - 4.0 * (a * c);
+    
     println!("D = {}", d);
+
+
+    // Find √ 
+
+    if d > 0.0 {
+        let x1 = ((-b) + d.sqrt()) / (2.0 * a);
+        let x2 = ((-b) - d.sqrt()) / (2.0 * a);
+
+        println!("Solved!\nx1 = {}\nx2 = {}", x1, x2);
+    }
+    if d == 0.0 {
+        let x = (-b) / (2.0 * a);
+        
+        println!("Solved!\nx1 = {}", x);
+    }
+    if d < 0.0 {
+        println!("Solved!\n SQRTS not found!");
+    }
 
 }
