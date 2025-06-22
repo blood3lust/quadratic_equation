@@ -55,7 +55,7 @@ fn main() {
         println!("Solved!\nx1 = {}", x);
     }
     if d < 0.0 {
-        println!("Solved!\n SQRTS not found!");
+        println!("Solved!\n SQRTS not found because {} < 0!", d);
     }
 
 }
